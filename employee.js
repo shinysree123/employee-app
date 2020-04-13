@@ -1,19 +1,18 @@
 var Express =require('express');
 var Bodyparser =require('body-parser');
-var Mongoose=require('mongoose');
-
+var mongoose=require('mongoose');
 var app=Express();
 app.use(Bodyparser.urlencoded({extended:false}));
-const employeeSchema= new Mongoose.Schema({
+const employeeSchema= new mongoose.Schema({
     empCode:String,
     empName:String,
     empCompany:String,
     empEmail:String,
     empPhone:Number,
     empPassword:String
-});
-var employeeModel= Mongoose.model('Employees',employeeSchema);
-Mongoose.connect("mongodb+srv://shinyjoseph:shiny@cluster0-ybmpu.mongodb.net/test?retryWrites=true&w=majority");
+});myjsonprograms
+var employeeModel= mongoose.model('Employees',employeeSchema);
+mongoose.connect("mongodb+srv://shinyjoseph:shiny@cluster0-ybmpu.mongodb.net/test?retryWrites=true&w=majority");
 
 app.get('/',(req,res)=>{
     res.send("Hai...");

@@ -2,7 +2,7 @@ var Express =require('express');
 var Bodyparser =require('body-parser');
 var mongoose=require('mongoose');
 var app=Express();
-app.use(Bodyparser.urlencoded({extended:false}));
+app.use(Bodyparser.urlencoded({extended:false}))
 const employeeSchema= new mongoose.Schema({
     empCode:String,
     empName:String,
@@ -33,7 +33,7 @@ app.post('/login',async(req,res)=>{
     try {
         var employeeCode = req.body.empCode;
         var employessPassword= req.body.empPassword;
-        res.json({"status": "sucess" })
+        res.json({"status": "success" })
     } catch (error) {
         res.json({"status": "failed" });
 

@@ -1,0 +1,16 @@
+{
+  "name": "employee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "employee.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node employee.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
